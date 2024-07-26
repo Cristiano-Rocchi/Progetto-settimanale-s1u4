@@ -11,28 +11,25 @@ public class Video extends ElementoMultimediale implements Play, Luminosita {
 
     public Video(String titolo, int luminosita, int durata, int volume) {
         super(titolo);
+        this.luminosita = luminosita;
+        this.durata = durata;
+        this.volume = volume;
     }
 
     @Override
     public void play() {
-        /*String volume = "";
-
-        for (int i = 0; i < this.volume; i++) {
-            volume += "!";
-        }
-        for (int i = 0; i < this.durata; i++) {
-            System.out.println(getTitolo() + volume);
-
-        }*/
         for (int i = 0; i < durata; i++) {
-            System.out.println(getTitolo() + " " + "!".repeat(volume));
+            System.out.println(getTitolo() + " " + "!".repeat(volume) + "*".repeat(luminosita));
         }
 
-        System.out.println("ciao");
+
     }
 
     @Override
     public void luminosita() {
+        for (int i = 0; i < durata; i++) {
+            System.out.println(getTitolo() + " " + "*".repeat(luminosita));
+        }
 
     }
 

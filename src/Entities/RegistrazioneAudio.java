@@ -3,15 +3,18 @@ package Entities;
 import Interfaces.Play;
 import Interfaces.Volume;
 
+import java.util.Scanner;
+
 public class RegistrazioneAudio extends ElementoMultimediale implements Play, Volume {
+    Scanner scanner = new Scanner(System.in);
     /*ATTRIBUTI*/
     private int volume;
-    private int durata;
-
-
 
 
     /*COSTRUTTORI*/
+    private int durata;
+
+    /*METODI*/
 
     public RegistrazioneAudio(String titolo, int volume, int durata) {
         super(titolo);
@@ -19,18 +22,30 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Play, Vo
         this.durata = durata;
     }
 
-    /*METODI*/
-
-
     public void abbassaVolume() {
-        volume++;
+        System.out.println("Di quanto vuoi abbassare il volume?");
+        int valoreVolume = Integer.parseInt(scanner.nextLine());
+        if (valoreVolume > 0 && valoreVolume < this.volume) {
+            setVolume(valoreVolume);
+        } else {
+            System.out.println("il volume deve essere mnore");
+            valoreVolume = Integer.parseInt(scanner.nextLine());
+        }
+
 
     }
 
     public void alzaVolume() {
-        if (volume > 0) {
-            volume--;
+        System.out.println("Di quanto vuoi alzare il volume?");
+        int valoreVolume = Integer.parseInt(scanner.nextLine());
+        if (valoreVolume > this.volume) {
+            setVolume(valoreVolume);
+        } else {
+            System.out.println("il volume deve essere maggiore");
+            valoreVolume = Integer.parseInt(scanner.nextLine());
         }
+
+
     }
 
 
