@@ -1,6 +1,6 @@
 package Entities;
 
-public class ElementoMultimediale {
+public abstract class ElementoMultimediale {
     /*ATTRIBUTI*/
     private String titolo;
 
