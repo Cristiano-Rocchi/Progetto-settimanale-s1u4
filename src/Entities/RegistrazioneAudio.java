@@ -8,12 +8,10 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Play {
     Scanner scanner = new Scanner(System.in);
     /*ATTRIBUTI*/
     private int volume;
-
-
-    /*COSTRUTTORI*/
     private int durata;
 
-    /*METODI*/
+    /*COSTRUTTORI*/
+
 
     public RegistrazioneAudio(String titolo, int volume, int durata) {
         super(titolo);
@@ -21,6 +19,7 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Play {
         this.durata = durata;
     }
 
+    /*METODI*/
     public void abbassaVolume() {
         System.out.println("Di quanto vuoi abbassare il volume?");
         int valoreVolume = Integer.parseInt(scanner.nextLine());

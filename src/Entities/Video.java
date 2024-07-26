@@ -5,10 +5,12 @@ import Interfaces.Play;
 
 
 public class Video extends ElementoMultimediale implements Play, Luminosita {
+    /*ATTRIBUTI*/
     private int luminosita;
     private int durata;
     private int volume;
 
+    /*COSTRUTTORI*/
     public Video(String titolo, int luminosita, int durata, int volume) {
         super(titolo);
         this.luminosita = luminosita;
@@ -16,6 +18,7 @@ public class Video extends ElementoMultimediale implements Play, Luminosita {
         this.volume = volume;
     }
 
+    /*METODI*/
     @Override
     public void play() {
         for (int i = 0; i < durata; i++) {
@@ -34,14 +37,4 @@ public class Video extends ElementoMultimediale implements Play, Luminosita {
     }
 
 
-    /*COSTRUTTORI*/
-
-
-
-
-
-
-
-
-    /*METODI*/
 }
