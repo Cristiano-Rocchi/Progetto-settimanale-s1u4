@@ -11,7 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean esci = false;
 
-        // Create multimedia elements
+        
         for (int i = 0; i < 5; i++) {
             System.out.println("Premi 1 per creare immagine, 2 per creare audio o 3 per creare video:");
             int scelta = Integer.parseInt(scanner.nextLine());
