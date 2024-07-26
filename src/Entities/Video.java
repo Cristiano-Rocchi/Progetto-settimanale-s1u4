@@ -1,10 +1,9 @@
 package Entities;
 
-import Interfaces.Luminosita;
 import Interfaces.Play;
 
 
-public class Video extends ElementoMultimediale implements Play, Luminosita {
+public class Video extends ElementoMultimediale implements Play {
     private int luminosita;
     private int durata;
     private int volume;
@@ -25,13 +24,7 @@ public class Video extends ElementoMultimediale implements Play, Luminosita {
 
     }
 
-    @Override
-    public void luminosita() {
-        for (int i = 0; i < durata; i++) {
-            System.out.println(getTitolo() + " " + "*".repeat(luminosita));
-        }
 
-    }
 
 
     /*COSTRUTTORI*/
