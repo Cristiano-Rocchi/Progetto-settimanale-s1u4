@@ -1,11 +1,10 @@
 package Entities;
 
 import Interfaces.Play;
-import Interfaces.Volume;
 
 import java.util.Scanner;
 
-public class RegistrazioneAudio extends ElementoMultimediale implements Play, Volume {
+public class RegistrazioneAudio extends ElementoMultimediale implements Play {
     Scanner scanner = new Scanner(System.in);
     /*ATTRIBUTI*/
     private int volume;

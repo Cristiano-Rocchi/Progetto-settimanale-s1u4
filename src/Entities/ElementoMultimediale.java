@@ -10,8 +10,7 @@ public class ElementoMultimediale {
         this.titolo = titolo;
     }
 
-    public ElementoMultimediale(int titolo, int volume, int durata, int luminosita) {
-    }
+
     /*METODI*/
 
     public String getTitolo() {
