@@ -50,15 +50,22 @@ public class Main {
             }
         }
 
-        
+
         while (!esci) {
             System.out.println("Inserisci un numero da 1 a 5 per eseguire un oggetto oppure 0 per finire:");
             int sceltaMultimedia = Integer.parseInt(scanner.nextLine());
             if (sceltaMultimedia == 0) {
                 esci = true;
             } else if (sceltaMultimedia >= 1 && sceltaMultimedia <= 5) {
-                arrayMultimedia[sceltaMultimedia - 1].show();
-                if ( )
+                if (arrayMultimedia[sceltaMultimedia - 1] instanceof Video) {
+                    ((Video) arrayMultimedia[sceltaMultimedia - 1]).play();
+                }
+                if (arrayMultimedia[sceltaMultimedia - 1] instanceof Immagine) {
+                    ((Immagine) arrayMultimedia[sceltaMultimedia - 1]).show();
+                }
+                if (arrayMultimedia[sceltaMultimedia - 1] instanceof RegistrazioneAudio) {
+                    ((RegistrazioneAudio) arrayMultimedia[sceltaMultimedia - 1]).play();
+                }
             } else {
                 System.out.println("Scelta non valida.");
             }
