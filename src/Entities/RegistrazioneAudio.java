@@ -1,4 +1,9 @@
-public class RegistrazioneAudio extends ElementoMultimediale {
+package Entities;
+
+import Interfaces.Play;
+import Interfaces.Volume;
+
+public class RegistrazioneAudio extends ElementoMultimediale implements Play, Volume {
     /*ATTRIBUTI*/
     private int volume;
     private int durata;
@@ -15,13 +20,6 @@ public class RegistrazioneAudio extends ElementoMultimediale {
     }
 
     /*METODI*/
-
-    public void play() {
-
-        for (int i = 0; i < durata; i++) {
-            System.out.println(getTitolo() + " " + "!".repeat(volume));
-        }
-    }
 
 
     public void abbassaVolume() {
@@ -51,4 +49,18 @@ public class RegistrazioneAudio extends ElementoMultimediale {
     public void setDurata(int durata) {
         this.durata = durata;
     }
+
+    /*METODI*/
+    @Override
+    public void play() {
+        {
+
+            for (int i = 0; i < durata; i++) {
+                System.out.println(getTitolo() + " " + "!".repeat(volume));
+            }
+        }
+    }
+
+
 }
+

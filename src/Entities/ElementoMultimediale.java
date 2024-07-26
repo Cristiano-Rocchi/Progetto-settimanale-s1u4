@@ -1,3 +1,5 @@
+package Entities;
+
 public class ElementoMultimediale {
     /*ATTRIBUTI*/
     private String titolo;
